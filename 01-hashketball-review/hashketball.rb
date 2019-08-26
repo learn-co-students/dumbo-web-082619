@@ -119,4 +119,79 @@ def game_hash
   }
 end
 
+def get_all_players
+  home_players = game_hash[:home][:players]
+  away_players = game_hash[:away][:players]
+  return home_players + away_players
+end
+
+def enumerate_get_all_players
+  all_players = game_hash.map do |location, attributes|
+    attributes[:players]
+  end
+
+  # NOT THE BEST OF WAYS:
+
+  # all_players = []
+  # game_hash.each do |location, attributes|
+  #   all_players<< attributes[:players]
+  # end
+  # return all_players.flatten
+
+
+  # all_players => [[{},{}] , [{},{}]]
+  # all_players.flatten => [{},{}, {},{}]
+
+  all_players.flatten
+
+end
+
+
+
+
+def find_player(name)
+
+  enumerate_get_all_players.find do |player_hash|
+    player_hash[:player_name] == name
+  end
+
+end
+
+
+
+
+def num_points_scored(player_name)
+  find_player(player_name)[:points]
+end
+
+def shoe_size(player_name)
+  find_player(player_name)[:shoe]
+end
+
+
+binding.pry
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #
