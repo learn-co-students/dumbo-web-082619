@@ -119,11 +119,13 @@ def game_hash
   }
 end
 
+
 def get_all_players
   home_players = game_hash[:home][:players]
   away_players = game_hash[:away][:players]
   return home_players + away_players
 end
+
 
 def enumerate_get_all_players
   all_players = game_hash.map do |location, attributes|
@@ -147,8 +149,6 @@ def enumerate_get_all_players
 end
 
 
-
-
 def find_player(name)
 
   enumerate_get_all_players.find do |player_hash|
@@ -156,8 +156,6 @@ def find_player(name)
   end
 
 end
-
-
 
 
 def num_points_scored(player_name)
