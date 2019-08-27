@@ -5,6 +5,7 @@
 * GET requests
 * Server /client responses & relationship overview
 * APIs
+  - Application Programming Interface - Programmatically interacting with an application
 * JSON (string formatted as a hash/object)
 
 ### Deliverables
