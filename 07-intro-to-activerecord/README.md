@@ -7,6 +7,14 @@
   * migrations
   * schema
 
+0) Establish the connection
+Create the tables
+  1) Create the migration - `rake db:create_migration NAME=create_cats` (terminal)
+  2) Fill out the instruction - `create_table :cats` (in the file created by step 1)
+  3) Execute that instruction (Migrate) - `rake db:migrate` (terminal)
+Create the Model
+  1) Inherit ActiveRecord::Base - `class Cat < ActiveRecord::Base` (class)
+
 ### Metaprogramming (Mass Assignment)
 Is the concept of writing code that writes code. In ruby, everything is an object. We interact with objects by *sending messages* to them. Objects know which messages to respond to and how via the *methods* that we define in the class.
 
