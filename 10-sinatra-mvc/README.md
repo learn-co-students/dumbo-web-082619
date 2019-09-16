@@ -13,16 +13,15 @@
 * Implement ERB template and get it to render data from controller and model
 * Practice file structure in Sinatra
 
-# Features ✅
-  * ActiveRecord
-  * rake
-  * migrations
-  * using ruby Models
-  * rake console
-  * index page
+# Features
+  * ActiveRecord ✅
+  * rake ✅
+  * migrations ✅
+  * using ruby Models ✅
+  * rake console ✅
+  * index page ✅
   * build search
     * query string
     * params
     * filtering
     * forms
-  * MVC refactor

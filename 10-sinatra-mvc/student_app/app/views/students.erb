@@ -1,0 +1,10 @@
+<h1>Here are all of the students</h1>
+<marquee> <%= @my_friends %>  ‍</marquee>
+<ul>
+  <% @students.each do |student| %>
+    <li>
+      <h4>Student name: <%= student.name %></h4>
+      <p>class they are attending: <%= student.class_name %></p>
+    </li>
+  <% end %>
+</ul>
