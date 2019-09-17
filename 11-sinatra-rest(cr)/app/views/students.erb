@@ -1,0 +1,12 @@
+<marquee><%= @my_friends %></marquee>
+
+<h1>Here are all of our students:</h1>
+<ul>
+  <% @students.each do |student| %>
+
+    <li>
+      <strong><%= student.name %></strong>
+      -
+      Age: <%= student.age %></li>
+  <% end %>
+</ul>

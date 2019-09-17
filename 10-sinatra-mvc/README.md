@@ -20,8 +20,3 @@
   * using ruby Models ✅
   * rake console ✅
   * index page ✅
-  * build search
-    * query string
-    * params
-    * filtering
-    * forms
