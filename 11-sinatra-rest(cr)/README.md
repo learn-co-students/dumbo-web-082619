@@ -13,11 +13,11 @@
   - check out http://www.restular.com/
 
 # RESTful CRUD
-* Reading
-* New
-* Creating
-  * Form
-  * Mass assignment
+* Reading ✅
+* New ✅
+* Creating ✅
+  * Form ✅
+  * Mass assignment ✅
 * Edit form
   * Nested params
 * Updating

@@ -113,3 +113,8 @@
     line-height: 24px;
   }
 }
+
+
+#enumerai-photo {
+  cursor: url(https://files.slack.com/files-pri/T02MD9XTF-FN2KLHK98/enumerati.jpg), auto;
+}
