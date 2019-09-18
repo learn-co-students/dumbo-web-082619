@@ -1,0 +1,13 @@
+<h1>Editing <%= @student.name %></h1>
+<form method="POST" action="/students/<%= @student.id %>">
+  <input type="hidden" name="_method" value="PUT" />
+  name: <input type="text" name="student[name]" value="<%= @student.name %>" />
+  <br>
+  age: <input type="number" name="student[age]" value="<%= @student.age %>" />
+  <br>
+  slogan: <input type="text" name="student[slogan]" value="<%= @student.slogan %>"/>
+  <br>
+  photo: <input type="text" name="student[photo_url]" value="<%= @student.photo_url %>"/>
+  <br>
+  <input type="submit" />
+</form>
