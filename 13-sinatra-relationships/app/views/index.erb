@@ -1,0 +1,16 @@
+<marquee><%= @my_friends %></marquee>
+
+<h1>Here are all of our students:</h1>
+<a href="/students/new" >➕ add a new student</a>
+<ul>
+  <% @students.each do |student| %>
+
+    <li>
+      <img width=20 src=<%= student.photo_url %> />
+      <a href="/students/<%= student.id %>" >
+        <strong><%= student.name %></strong>
+      </a>
+      -
+      Age: <%= student.age %></li>
+  <% end %>
+</ul>
