@@ -1,5 +1,4 @@
 class HabitsController < ApplicationController
-  # get '/habits'
   get '/habits' do
     @habits = Habit.all
     erb :'habits/index'

@@ -13,3 +13,17 @@
   * What's the difference between it and an <input />?
   * What are some similarities?
 * How can I list the thing I has_many of in a view?
+
+
+
+
+
+## Other fun things
+* Many to Many relationships
+* Different ways to create instances through relationships
+* Build search
+    * query string
+    * params
+    * filtering
+    * forms
+* Partials
