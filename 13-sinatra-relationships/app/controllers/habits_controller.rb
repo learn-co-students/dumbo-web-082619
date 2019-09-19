@@ -11,6 +11,7 @@ class HabitsController < ApplicationController
   end
 
   post '/habits' do
+    # binding.pry
     habit = Habit.create(params[:habit])
 
     redirect to "/students/#{habit.student.id}"

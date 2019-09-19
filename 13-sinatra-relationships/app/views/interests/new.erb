@@ -1,0 +1,18 @@
+<h1>Let's make a new interest!</h1>
+<form method="POST" action="/interests">
+  <select name="interest[student_id]">
+    <% @students.each do |student| %>
+      <option value="<%= student.id %>"><%= student.name %></option>
+    <% end %>
+  </select>
+  is interested in 
+  <select name="interest[topic_id]">
+    <% @topics.each do |topic| %>
+      <option value="<%= topic.id %>"><%= topic.name %></option>
+    <% end %>
+  </select>
+
+
+
+  <input type="submit" />
+</form>

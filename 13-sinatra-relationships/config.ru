@@ -5,6 +5,8 @@ if ActiveRecord::Migrator.needs_migration?
 end
 
 # use Rack::MethodOverride
+use InterestsController
+use TopicsController
 use StudentsController
 use HabitsController
 run ApplicationController

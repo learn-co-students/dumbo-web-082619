@@ -18,9 +18,16 @@
 
 
 
+
+
+
+
+
+
+
+
 ## Part 2
 * Different ways to create instances through relationships
-<!-- https://ca.slack-edge.com/T02MD9XTF-UCY5DSXJS-f9a29d71aa91-512 -->
 * Many to Many relationships
   * Student `has_many` Topics `through` Interests
 * Build search

@@ -2,13 +2,32 @@
 <img height=300 src=<%= @student.photo_url %> />
 
 <br/>
+<hr/>
+<h4>Add a new habit</h4>
+<form method="POST" action="/habits">
+  name: <input type="text" name="habit[name]"  />
+  <input type="hidden" name="habit[student_id]" value="<%= @student.id %>" />
+  <input type="submit"  value="Create a new habit for <%= @student.name %>"/>
+</form>
 
+<hr/>
+<br/>
 <h4><%= @student.name %> Habits</h4>
 <ul>
   <% @student.habits.each do |habit| %>
     <li><%= habit.name %></li>
   <% end %>
 </ul>
+<br/>
+
+<!-- ??? add the topics a student is interested in -->
+<h4><%= @student.name %> Topics</h4>
+<ul>
+  <% @student.topics.each do |topic| %>
+    <li><%= topic.name %></li>
+  <% end %>
+</ul>
+
 
 <br/>
 
