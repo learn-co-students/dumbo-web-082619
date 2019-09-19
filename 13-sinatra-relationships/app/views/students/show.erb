@@ -1,5 +1,13 @@
 <h1><%= @student.name %></h1>
 <img src=<%= @student.photo_url %> />
+
+<h4><%= @student.name %> Habits</h4>
+<ul>
+  <% @student.habits.each do |habit| %>
+    <li><%= habit.name %></li>
+  <% end %>
+</ul>
+
 <h4>Age: <%= @student.age %></h4>
 <h4>Slogan: <%= @student.slogan %></h4>
 

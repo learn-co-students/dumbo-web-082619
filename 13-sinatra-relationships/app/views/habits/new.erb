@@ -1,0 +1,11 @@
+<h1>Let's make you a new habit!</h1>
+<form method="POST" action="/habits">
+  name: <input type="text" name="habit[name]"  />
+  student id:
+  <select name="habit[student_id]">
+    <%  @students.each  do |student| %>
+      <option value="<%= student.id %>"><%= student.name %></option>
+    <% end %>
+  </select>
+  <input type="submit" />
+</form>
