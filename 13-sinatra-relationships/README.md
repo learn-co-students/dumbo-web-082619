@@ -20,6 +20,7 @@
 
 ## Other fun things
 * Many to Many relationships
+  * Student `has_many` Topics `through` Interests
 * Different ways to create instances through relationships
 * Build search
     * query string
