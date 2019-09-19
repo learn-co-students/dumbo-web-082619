@@ -1,4 +1,6 @@
-# Key Questions
+# Sinatra Relationships
+
+## Key Questions
 * How can I have multiple controllers in Sinatra, and how do I know if I need more than one?
   - Create them and need them if you have more than one model
   - config.ru -> `use HabitsController` before `run ApplicationController`
@@ -16,15 +18,11 @@
 
 
 
-
-
-## Other fun things
+## Part 2
 * Many to Many relationships
   * Student `has_many` Topics `through` Interests
 * Different ways to create instances through relationships
 * Build search
-    * query string
-    * params
+    * query params
     * filtering
-    * forms
 * Partials
