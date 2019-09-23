@@ -1,7 +1,20 @@
 <marquee><%= @my_friends %></marquee>
 
 <h1>Here are all of our students:</h1>
+<form>
+  <input type="text" name="q" placeholder="Searh here"/>
+  <input type="submit" value="Search" />
+</form>
+<hr>
+<br>
 <a href="/students/new" >➕ add a new student</a>
+
+<% if @error %>
+  <div style="color: red; font-size: 20px;">
+    <%= @error %>
+  </div>
+<% end %>
+
 <ul>
   <% @students.each do |student| %>
 

@@ -13,8 +13,20 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/students' do
+    # check if there are query params specifically the "q" key
+    searchTearm = params[:q]
+    # @students = Student.where("name like ?", "%#{searchTearm}%")
+
+    @students = Student.all.select do |student|
+      student.name.downcase.include? searchTearm.downcase
+    end
+
+
     # get all of our students
-    @students = Student.all
+    if @students.empty?
+      @error = "We didn't find any results! Sorry"
+      @students = Student.all
+    end
     # build the html we need to show our user
     @my_friends =  "🧙" *  9999
     erb :index
