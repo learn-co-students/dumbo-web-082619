@@ -1,0 +1,7 @@
+<h1>This Is The Show Page For: <%= @pizza.name %></h1>
+This pizza costs $<%= @pizza.cost %> for a <%= @pizza.size %> size pie. <br />
+<% if @pizza.extra_cheese %>
+  It has extra cheese.
+<% else %>
+  It does not have extra cheese.
+<% end %>
