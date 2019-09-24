@@ -5,3 +5,13 @@ This pizza costs $<%= @pizza.cost %> for a <%= @pizza.size %> size pie. <br />
 <% else %>
   It does not have extra cheese.
 <% end %>
+
+<h2>Toppings</h2>
+<ul>
+  <% @pizza.toppings.each do |topping| %>
+    <li><%= topping.name %> | <%= topping.tasting_notes %></li>
+  <% end %>
+</ul>
+
+<%= link_to "Edit this PIZZA", edit_pizza_path(@pizza) %>
+<%= button_to "BLAST IT OFF THE FACE OF THE EARTH", pizza_path(@pizza), method: :delete %>
