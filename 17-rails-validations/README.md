@@ -6,9 +6,6 @@ Rails Validations
 - Validate different data types (string, number, boolean)
 - Create custom validations
 - Use the flash hash to persist data for an additional request and render error messages to the user
-- *BONUS*: Use controller filter methods like `before_action` to cut down on repetitive code
-- *BONUS*: Render partial views to re-use HTML across different view files
-- *BONUS*: Customize the app's layout using the application.html.erb file 
 
 **Problem Statement:** We need to make sure users input data in a way that ensures only *valid* data is saved in our database. 
 
