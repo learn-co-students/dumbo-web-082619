@@ -131,7 +131,7 @@ Since we've added validations to our Student model, we can check if the new stud
 We can use the `.valid?` method to check if the student was successfully created, and use the `.errors.full_messages` methods to get any error messages if the model isn't valid. **But** we have one more issue: since we want to show the user the form *and* the error messages in the view after redirecting, how can we persist the errors for the next request?
 
 
-### `flash` Hash
+### Flash Hash
 
 The solution to our problem of persisting data across requests can't be fixed by any of the tools we've seen to this point. To solve this issue, Rails provides a new tool: the Flash Hash.
 
