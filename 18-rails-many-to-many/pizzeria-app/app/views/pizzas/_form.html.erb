@@ -1,0 +1,15 @@
+<%= form_for @pizza do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :cost %>
+  <%= f.number_field :cost %>
+
+  <%= f.label :size %>
+  <%= f.text_field :size %>
+
+  <%= f.label :extra_cheese, "Extra 🧀🧀" %>
+  <%= f.check_box :extra_cheese %>
+
+  <%= f.submit %>
+<% end %>

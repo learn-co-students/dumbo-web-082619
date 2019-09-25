@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PizzeriaApp</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <nav>
+      <%= link_to "Pizzas 🍕", pizzas_path %>
+      <%= link_to "New Pizza 🍕", new_pizza_path %>
+      <%= link_to "Toppings", toppings_path %>
+    </nav>
+    <%= yield %>
+    <em>© 2019 Ian Hollander + Enumerati ™️</em>
+  </body>
+</html>

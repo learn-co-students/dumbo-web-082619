@@ -1,0 +1,28 @@
+<%= render "header" %>
+
+<h1>This is our 'za shop</h1>
+
+<h2><%= flash[:happy] %></h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Size</th>
+      <th>Cost</th>
+      <th>Extra Cheese?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @pizzas.each do |pizza| %>
+      <tr>
+        <td>
+          <%= link_to pizza.name, pizza %>
+        </td>
+        <td><%= pizza.size %></td>
+        <td><%= pizza.cost %></td>
+        <td><%= pizza.extra_cheese %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
