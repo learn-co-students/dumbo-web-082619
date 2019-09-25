@@ -1,0 +1,14 @@
+<h1>Let's top it</h1>
+
+<%= form_for @topping do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  
+  <%= f.label :pizza_id %>
+  <%= f.collection_select :pizza_id, @pizzas, :id, :name, prompt: true %>
+
+  <%= f.label :tasting_notes %>
+  <%= f.text_area :tasting_notes %>
+
+  <%= f.submit %>
+<% end %>

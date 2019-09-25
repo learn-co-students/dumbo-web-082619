@@ -1,0 +1,17 @@
+<h1>This Is The Show Page For: <%= @pizza.name %></h1>
+This pizza costs $<%= @pizza.cost %> for a <%= @pizza.size %> size pie. <br />
+<% if @pizza.extra_cheese %>
+  It has extra cheese.
+<% else %>
+  It does not have extra cheese.
+<% end %>
+
+<h2>Toppings</h2>
+<ul>
+  <% @pizza.toppings.each do |topping| %>
+    <li><%= link_to topping.name, topping %></li>
+  <% end %>
+</ul>
+
+<%= link_to "Edit this pizza", edit_pizza_path(@pizza) %>
+<%= button_to "BLAST IT OFF THE FACE OF THE EARTH", pizza_path(@pizza), method: :delete %>

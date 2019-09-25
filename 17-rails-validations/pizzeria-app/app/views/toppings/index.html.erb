@@ -1,0 +1,8 @@
+<h1>All the toppings that exist in our app</h1>
+<ul>
+  <% @toppings.each do |topping| %>
+    <li>
+      <%= link_to topping.name, topping_path(topping) %>
+    </li>
+  <% end %>
+</ul>
