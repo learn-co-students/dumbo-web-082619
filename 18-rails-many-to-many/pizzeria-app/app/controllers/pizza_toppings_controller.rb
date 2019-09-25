@@ -2,7 +2,8 @@ class PizzaToppingsController < ApplicationController
 
   def new
     @pizza_topping = PizzaTopping.new
-
+    @pizzas = Pizza.all
+    @toppings = Topping.all
   end
 
   def create

@@ -2,9 +2,9 @@ here's a pizza topping form!
 
 <%= form_for @pizza_topping do |f| %>
   <%= f.label :pizza_id %>
-  <%= f.collection_select :pizza_id, Pizza.all, :name, :name, prompt: true %>
+  <%= f.collection_select :pizza_id, @pizzas, :name, :name, prompt: true %>
   <%= f.label :topping_id %>
-  <%= f.collection_select :topping_id, Topping.all, :id, :name, prompt: true %>
+  <%= f.collection_select :topping_id, @toppings, :id, :name, prompt: true %>
   <%= f.label :amount %>
   <%= f.number_field :amount %>
   <%= f.submit %>
