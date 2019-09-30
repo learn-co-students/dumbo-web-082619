@@ -87,10 +87,6 @@ article.content p {
   line-height: 1.5em;
 }
 
-article::after {
-  clear: both;
-}
-
 .article-image {
   width: 200px;
   height: 200px;
