@@ -11,7 +11,12 @@ class PizzasController < ApplicationController
 
   def show
     # model
-
+    # set_page_count
+    # if session[:page_count] == nil
+    #   session[:page_count] = 0
+    # end
+    session[:page_count] += 1
+    @page_count = session[:page_count]
     # render/redirect
     # render :show
   end

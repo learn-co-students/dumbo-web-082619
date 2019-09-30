@@ -57,7 +57,7 @@ session[:page_count] ||= 0
 @page_count = session[:page_count]
 ```
 
-Rails provides several mechanisms for working with sessions. Cookies are the default option and easiest to configure.
+Rails provides several mechanisms for working with sessions. Sessions can be persisted using cookies; this is the default option and easiest to configure.
 
 More Info: [Action Controller Overview — Ruby on Rails Guides](https://guides.rubyonrails.org/action_controller_overview.html#session)
 

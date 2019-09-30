@@ -3,6 +3,9 @@ Rails.application.routes.draw do
   resources :toppings
   
   resources :pizzas
+
+  patch "/sessions/reset", to: "sessions#reset"
+
   # resources :pizzas creates thses routes:
   # get "/pizzas", to: "pizzas#index", as: "pizzas"
   # get "/pizzas/new", to: "pizzas#new", as: "new_pizza"
