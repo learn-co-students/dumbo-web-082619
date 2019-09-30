@@ -1,0 +1,35 @@
+<%= form_for @pizza, html: { class: "form" } do |f| %>
+  <h4 class="form-header">Pizza Form</h4>
+
+  <div class="form-field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="form-field">
+    <%= f.label :cost %>
+    <%= f.number_field :cost %>
+  </div>
+
+  <div class="form-field">
+    <%= f.label :size %>
+    <%= f.text_field :size %>
+  </div>
+
+  <div class="form-field">
+    <%= f.check_box :extra_cheese %>
+    <%= f.label :extra_cheese, "Extra 🧀🧀", class: "checkbox" %>
+  </div>
+
+  <% if flash[:errors] %>
+    <ul>
+      <% flash[:errors].each do |error| %>
+        <li class="error"><%= error %></li>
+      <% end %>
+    </ul>
+  <% end %>
+
+  <div class="form-field">
+    <%= f.submit class: "button" %>
+  </div>
+<% end %>

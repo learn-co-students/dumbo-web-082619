@@ -1,0 +1,10 @@
+<%= render "shared/heading", title: "All You Ever Wanted To Know About #{@topping.name}" %>
+
+<article class="content">
+  <%= image_tag @topping.image, class: "article-image" %>
+  <p>
+    <%= @topping.tasting_notes %>
+  </p>
+</article>
+
+<%= button_to "Edit This Topping", edit_topping_path(@topping), method: :get, class: "button", form_class: "button_to" %>

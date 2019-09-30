@@ -1,0 +1,32 @@
+<%= render "shared/heading", title: "Here's a Pizza Topping Form!" %>
+
+<%= form_for @pizza_topping, html: { class: "form" } do |f| %>
+  <h4 class="form-header">Pizza Topping</h4>
+
+  <div class="form-field">
+    <%= f.label :pizza_id %>
+    <%= f.collection_select :pizza_id, @pizzas, :id, :name, prompt: true %>
+  </div>
+
+  <div class="form-field">
+    <%= f.label :topping_id %>
+    <%= f.collection_select :topping_id, @toppings, :id, :name, prompt: true %>
+  </div>
+
+  <div class="form-field">
+    <%= f.label :amount %>
+    <%= f.number_field :amount %>
+  </div>
+
+  <% if flash[:errors] %>
+    <ul>
+      <% flash[:errors].each do |error| %>
+        <li class="error"><%= error %></li>
+      <% end %>
+    </ul>
+  <% end %>
+
+  <div class="form-field">
+    <%= f.submit "Create Pizza Topping", class: "button" %>
+  </div>
+<% end %>

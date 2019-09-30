@@ -1,0 +1,14 @@
+<%= render "shared/heading", title: "All the toppings that exist in our app" %>
+
+<div class="card-container">
+  <% @toppings.each do |topping| %>
+    <%= link_to topping_path(topping), class: "card" do %>
+      <%= image_tag topping.image %>
+      <span class="title">
+        <%= topping.name %>
+      </span>
+    <% end %>
+  <% end %>
+</div>
+
+<%= button_to "New Topping", new_topping_path, method: :get, class: "button", form_class: "button_to" %>
