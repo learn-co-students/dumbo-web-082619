@@ -58,6 +58,7 @@ GEM
       zeitwerk (~> 2.1, >= 2.1.8)
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
+    bcrypt (3.1.13)
     bindex (0.8.1)
     bootsnap (1.4.5)
       msgpack (~> 1.0)
@@ -75,7 +76,6 @@ GEM
       rake (< 13.0)
     concurrent-ruby (1.1.5)
     crass (1.0.4)
-    dotenv (2.7.5)
     erubi (1.8.0)
     faker (2.4.0)
       i18n (~> 1.6.0)
@@ -145,7 +145,6 @@ GEM
       ffi (~> 1.0)
     regexp_parser (1.6.0)
     ruby_dep (1.5.0)
-    rubytest (0.8.1)
     rubyzip (1.2.4)
     sass (3.7.4)
       sass-listen (~> 4.0.0)
@@ -173,8 +172,6 @@ GEM
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
     sqlite3 (1.4.1)
-    test (1.0.0)
-      rubytest
     thor (0.20.3)
     thread_safe (0.3.6)
     tilt (2.0.9)
@@ -207,10 +204,10 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bcrypt (~> 3.1.7)
   bootsnap (>= 1.4.2)
   byebug
   capybara (>= 2.15)
-  dotenv (~> 2.7)
   faker (>= 2.0)
   jbuilder (~> 2.7)
   listen (>= 3.0.5, < 3.2)
@@ -221,7 +218,6 @@ DEPENDENCIES
   spring
   spring-watcher-listen (~> 2.0.0)
   sqlite3 (~> 1.4)
-  test (~> 1.0)
   turbolinks (~> 5)
   tzinfo-data
   web-console (>= 3.3.0)

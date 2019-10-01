@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :users, only: [:new, :create]
   resources :pizza_toppings, only: [:new, :create]
   resources :toppings
   
