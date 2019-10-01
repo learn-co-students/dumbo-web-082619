@@ -1,0 +1,271 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ /* reset */
+ * {
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+/* layout */
+body {
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  background-color: #FFF8E7
+}
+
+a {
+  text-decoration: none;
+}
+
+/* menu */
+.menu {
+  background-color: #333;
+  color: #f1f1f1;
+}
+
+.menu .container,
+.menu nav {
+  display: flex;
+}
+
+.menu .logo {
+  font-weight: 500;
+  background-color: #292929;
+}
+
+.menu .item {
+  padding: 1em;
+  flex: 0 0 auto;
+  color: #f1f1f1;
+  transition: background-color 0.2s ease, opacity 0.2s ease;
+}
+
+.menu a.item:hover {
+  opacity: 0.9;
+  background-color: #474747;
+}
+
+.menu .right {
+  margin-left: auto;
+  background-color: #474747;
+  display: flex;
+}
+
+/* headings */
+.heading {
+  margin: 1em auto 0.5em;
+  padding-bottom: 0.5em;
+  border-bottom: 1px solid #c7c7c7;
+}
+
+.subheading {
+  text-decoration: underline;
+  line-height: 1.5em;
+  margin: 1.5em 0 0.5em;
+}
+
+article.content {
+  display: flex;
+}
+
+article.content p {
+  margin-bottom: 1.5em;
+  line-height: 1.5em;
+}
+
+.article-image {
+  width: 200px;
+  height: 200px;
+  margin-right: 1em;
+}
+
+/* responsive width */
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+@media (max-width: 899px) {
+  .container {
+    width: 700px;
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1199px) {
+  .container {
+    width: 800px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1100px;
+  }
+}
+
+
+/* tables */
+.table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid rgba(34, 36, 38, 0.15);
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.table thead {
+  vertical-align: bottom;
+}
+
+.table tr th {
+  background-color: #c7c7c7;
+  padding: 0.75em 0.5em;
+  text-align: left;
+}
+
+.table tr td {
+  padding: 0.75em 0.5em;
+  background-color: #fff;
+  border-left: 1px solid rgba(34, 36, 38, 0.15);
+  border-top: 1px solid rgba(34, 36, 38, 0.15);
+}
+
+.table tr td:first-child {
+  border-left: none;
+}
+
+/* forms */
+.form {
+  width: 100%;
+  border: 1px solid rgba(34, 36, 38, 0.15);
+  background-color: #fff;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.form-header {
+  background-color: #c7c7c7;
+  padding: 1em;
+}
+
+.form-field {
+  margin: 1.5em 1em;
+}
+
+.form-field label {
+  display: block;
+  font-size: 0.8em;
+  font-weight: 700;
+  margin: 0.25em 0.5em;
+}
+
+.form-field input, 
+.form-field select,
+.form-field textarea {
+  width: 100%;
+  border: 1px solid rgba(34,36,38,.15);
+  padding: 0.5em 1em;
+}
+
+.form-field select {
+  outline: 0;
+  background: #fff;
+  border-radius: 0;
+	line-height:normal;
+	-webkit-appearance:none;
+	-moz-appearance:none;
+	-ms-appearance:none;
+	appearance:none;
+}
+
+.form-field input[type=checkbox],
+.form-field input[type=submit] {
+  width: auto;
+}
+
+.form-field label.checkbox {
+  display: initial;
+}
+
+/* buttons */
+.button,
+.form-field .button {
+  cursor: pointer;
+  background-color: #c7c7c7;
+  color: #353434;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 0.75em 1.5em;
+  transition: opacity 0.2s ease;
+  margin-right: 1em;
+}
+
+.button:hover,
+.form-field .button:hover {
+  opacity: 0.8;
+}
+
+.button_to {
+  display: inline-block;
+  padding: 1em 0;
+}
+
+
+/* cards */
+.card-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.card {
+	flex: 0 1 calc(33% - 1em);
+  position: relative; 
+  margin: 2em 0;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.2s ease;
+}
+
+.card .title {
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%, -50%);
+  opacity: 0;
+  font-size: 22px;
+  font-weight: 700;
+  color: #333;
+  text-align: center;
+  transition: opacity 0.2s ease;
+}
+
+.card:hover img {
+  opacity: 0.5;
+}
+
+.card:hover .title {
+  opacity: 1;
+}
+
+/* alert messages */
+.error {
+  color: #D93025;
+}

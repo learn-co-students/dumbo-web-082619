@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pizzeria App</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header class="menu">
+      <div class="container">
+        <span class="logo item">
+          Enumerati Pizza
+        </span>
+        <nav>
+          <%= link_to "Pizzas", pizzas_path, class: "item" %>
+          <%= link_to "Toppings", toppings_path, class: "item" %>
+        </nav>
+        <nav class="right">
+          <span class="item">
+            Welcome, User!
+          </span>
+        </nav>
+      </div>
+    </header>
+    <div class="main">
+      <div class="container">
+        <%= yield %>
+      </div>
+    </div>
+  </body>
+</html>

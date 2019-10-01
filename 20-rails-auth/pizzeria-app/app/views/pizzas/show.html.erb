@@ -1,0 +1,38 @@
+<%= render "shared/heading", title: "This Is The Show Page For #{@pizza.name} Pizza" %>
+
+
+<h2>Page Views: <%= @page_count %></h2>
+
+<% if @page_count > 3 %>
+  <iframe width="973" height="730" src="https://www.youtube.com/embed/Kg2j6EifRWo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+  <%= button_to 'I Solemnly Swear I Watched The Whole Ad', "/sessions/reset", method: :patch %>
+<% else %>
+
+<article class="content">
+  <p>
+    This pizza costs $<%= @pizza.cost %> for a <%= @pizza.size %> size pie.
+  </p>
+  <p>
+    <% if @pizza.extra_cheese %>
+      It has extra cheese.
+    <% else %>
+      It does not have extra cheese.
+    <% end %>
+  </p>
+  <% if @pizza.toppings.length > 0 %>
+    <p>
+      It has the following toppings: 
+      <ul>
+        <% @pizza.toppings.each do |topping| %>
+          <li><%= link_to topping.name, topping %></li>
+        <% end %>
+      </ul>
+    <% end %>
+    </p>
+</article>
+
+  <%= button_to "Edit This Pizza", edit_pizza_path(@pizza), method: :get, class: "button", form_class: "button_to" %>
+  <%= button_to "Blast It Off the Face of the Earth", pizza_path(@pizza), method: :delete, class: "button", form_class: "button_to" %>
+
+<% end %>

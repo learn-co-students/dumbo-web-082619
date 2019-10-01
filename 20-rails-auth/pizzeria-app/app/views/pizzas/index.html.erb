@@ -1,0 +1,35 @@
+<%= render "shared/heading", title: "Welcome to the Pizza Shop" %>
+
+<h2><%= flash[:happy] %></h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Size</th>
+      <th>Cost</th>
+      <th>Extra Cheese?</th>
+      <th>Toppings</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @pizzas.each do |pizza| %>
+      <tr>
+        <td>
+          <%= link_to pizza.name, pizza %>
+        </td>
+        <td><%= pizza.size %></td>
+        <td><%= pizza.cost %></td>
+        <td><%= pizza.extra_cheese %></td>
+        <td>
+          <% pizza.toppings.each_with_index do |topping, index| %>
+            <%= link_to topping.name, topping %><%= ", " unless index === pizza.toppings.length - 1 %>
+          <% end %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= button_to "New Pizza", new_pizza_path, method: :get, class: "button", form_class: "button_to" %>
+<%= button_to "New Pizza Topping", new_pizza_topping_path, method: :get, class: "button", form_class: "button_to" %>

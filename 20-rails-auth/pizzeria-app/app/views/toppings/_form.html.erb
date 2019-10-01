@@ -1,0 +1,30 @@
+<%= form_for @topping, html: { class: "form" } do |f| %>
+  <h4 class="form-header">Topping Form</h4>
+
+  <div class="form-field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="form-field">
+    <%= f.label :image, "Image URL" %>
+    <%= f.text_field :image %>
+  </div>
+
+  <div class="form-field">
+    <%= f.label :tasting_notes %>
+    <%= f.text_area :tasting_notes %>
+  </div>
+
+  <% if flash[:errors] %>
+    <ul>
+      <% flash[:errors].each do |error| %>
+        <li class="error"><%= error %></li>
+      <% end %>
+    </ul>
+  <% end %>
+
+  <div class="form-field">
+    <%= f.submit class: "button" %>
+  </div>
+<% end %>

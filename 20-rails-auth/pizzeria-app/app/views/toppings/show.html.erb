@@ -1,0 +1,21 @@
+<%= render "shared/heading", title: "All You Ever Wanted To Know About #{@topping.name}" %>
+
+<h2>Page Views: <%= @page_count %></h2>
+
+<% if @page_count > 3 %>
+  <iframe width="973" height="730" src="https://www.youtube.com/embed/Kg2j6EifRWo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+  <%= button_to 'I Solemnly Swear I Watched The Whole Ad', "/sessions/reset", method: :patch %>
+
+
+
+<% else %>
+  <article class="content">
+    <%= image_tag @topping.image, class: "article-image" %>
+    <p>
+      <%= @topping.tasting_notes %>
+    </p>
+  </article>
+
+  <%= button_to "Edit This Topping", edit_topping_path(@topping), method: :get, class: "button", form_class: "button_to" %>
+<% end %>
