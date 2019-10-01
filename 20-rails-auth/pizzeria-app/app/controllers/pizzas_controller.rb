@@ -2,8 +2,9 @@ class PizzasController < ApplicationController
   before_action :set_pizza, only: [:show, :edit, :update, :destroy]
 
   def index
+    byebug
     # model
-    @pizzas = Pizza.all
+    @pizzas = @current_user.pizzas
 
     # render/redirect
     # render :index
@@ -36,7 +37,7 @@ class PizzasController < ApplicationController
 
   def create
     # model
-    pizza = Pizza.create(pizza_params)
+    pizza = Pizza.create(pizza_params.merge(user_id: @current_user.id))
 
     # render/redirect
     redirect_to pizza_path(pizza)

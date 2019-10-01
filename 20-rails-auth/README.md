@@ -13,14 +13,29 @@ Rails Authentication & Authorization
 - Expose this information in a sample rails app
 - Go over sessions, cookies, and implement sign up, log in, and log out
 
-## To Discuss
+## Part I
 - What's the difference between Authentication vs Authorization?
+Authentication: identification
+Authorization: permission
 
 - What is hashing and how does it make password storage more secure?
+"password123" -> "piugaws9d8gyq;34tps9d7faw4t"
+"password321" -> "p97hv;p98;7dsto3q4itei;fgna"
+"password123" -> "piugaws9d8gyq;34tps9d7faw4t"
 
 - What are rainbow tables and how can they defeat a password hashing strategy?
 
 - What is salting? What is a salt? How can it defeat a rainbow tables attack?
+"password123" + "seasalt" -> "seasalt/lisudgfap9w8e45yp39qwhtasefiosdyt"
+"password123" + "himylayan rock salt" -> "himylayan rock salt/aklufhsldfhuas;dfuhas;dfuhas;difgu" 
+
+
+## Part II
+- Sign Up vs Login 
+- When to use a "SessionsController" and when to use ApplicationController
+- Locking down parts of our application
+- Using information about our signed in user
+- Logout
 
 
 ### How does auth work in theory?
@@ -201,13 +216,11 @@ Show how this works and filter's the song by user (when logged in). However, you
 
 ```ruby
 def current_user
-  if session[:user_id]
-    @user = User.find_by(id: session[:user_id])
-  end
+  @current_user ||= User.find_by(id: session[:user_id])
 end
 
 def logged_in?
-  !!current_user
+  !current_user.nil?
 end
 ```
 
@@ -215,7 +228,7 @@ Now, you can refactor `SongsController#index`
 
 ```ruby
 if logged_in?
-  @songs = current_user.songs
+  @songs = @current_user.songs
 else
   @songs = Song.all # or force a login
 end
@@ -258,6 +271,7 @@ delete "sessions", to: "sessions#destroy"
 ```ruby
 def destroy
   session.delete(:user_id) # or session[:user_id] = nil
+  @current_user = nil
 end
 ```
 

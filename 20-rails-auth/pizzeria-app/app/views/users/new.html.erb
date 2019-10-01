@@ -1,11 +1,27 @@
-<%= form_for @user do |f| %>
+<%= render "shared/heading", title: "Welcome To Our App" %>
 
-  <%= f.label :username %>
-  <%= f.text_field :username %>
+<%= form_for @user, html: { class: "form" } do |f| %>
+  <h4 class="form-header">Login</h4>
 
-  <%= f.label :password %>
-  <%= f.password_field :password %>
+  <div class="form-field">
+    <%= f.label :username %>
+    <%= f.text_field :username %>
+  </div>
 
-  <%= f.submit %>
-  
+  <div class="form-field">
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+  </div>
+
+  <% if flash[:errors] %>
+    <ul>
+      <% flash[:errors].each do |error| %>
+        <li class="error"><%= error %></li>
+      <% end %>
+    </ul>
+  <% end %>
+
+  <div class="form-field">
+    <%= f.submit class: "button" %>
+  </div>
 <% end %>

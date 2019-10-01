@@ -3,12 +3,15 @@
 # so we don't end up with duplicate records
 Pizza.destroy_all
 Topping.destroy_all
+User.destroy_all
+
+user = User.create(username: "Ian", password: "password123")
 
 # create pizzas
 pizzas = [
-  { name:"Plain ol cheese", cost: rand(10..30), size:"Large", extra_cheese: true }, 
-  { name:"Supreme", cost: rand(10..30), size:"Medium", extra_cheese: true }, 
-  { name:"Hawaiian", cost: rand(10..30), size:"Large", extra_cheese: true }
+  { user: user, name:"Plain ol cheese", cost: rand(10..30), size:"Large", extra_cheese: true }, 
+  { user: user, name:"Supreme", cost: rand(10..30), size:"Medium", extra_cheese: true }, 
+  { user: user, name:"Hawaiian", cost: rand(10..30), size:"Large", extra_cheese: true }
 ]
 
 Pizza.create(pizzas)

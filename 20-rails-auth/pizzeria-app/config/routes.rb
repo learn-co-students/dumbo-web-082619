@@ -6,6 +6,9 @@ Rails.application.routes.draw do
   resources :pizzas
 
   patch "/sessions/reset", to: "sessions#reset"
+  get "/login", to: "sessions#new", as: "login"
+  post "/login", to: "sessions#create"
+  delete "/logout", to: "sessions#destroy"
 
   # resources :pizzas creates thses routes:
   # get "/pizzas", to: "pizzas#index", as: "pizzas"

@@ -1,13 +1,14 @@
 class UsersController < ApplicationController
+  skip_before_action :authenticated, only: [:new, :create]
 
   def new
     @user = User.new
   end
 
   def create
-    @user = User.create(user_params)
-    if @user.valid?
-      session[:user_id] = @user.id
+    user = User.create(user_params)
+    if user.valid?
+      session[:user_id] = user.id
       redirect_to pizzas_path
     else
       flash[:errors] = ["Invalid Username Or Password"]

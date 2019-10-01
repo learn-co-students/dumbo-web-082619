@@ -1,7 +1,7 @@
 class Pizza < ApplicationRecord
   has_many :pizza_toppings, dependent: :destroy
   has_many :toppings, through: :pizza_toppings
-
+  belongs_to :user
 
   validates :cost, numericality: true
   validate :cost_between_five_and_fifty
