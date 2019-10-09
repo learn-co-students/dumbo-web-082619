@@ -10,3 +10,45 @@
 * What, at a basic level, is a promise?
 * How can I work with the promise that fetch returns?
 * How can I update the DOM based on the JSON I have fetched?
+
+
+When X happens,
+  - We press the button
+We make Y fetch
+  - GET https://dog.ceo/api/breeds/image/random
+And manipulate the DOM Z way
+  - Add dog image to the DOM
+
+
+
+
+Asynchronous
+
+JavaScript
+
+and
+
+XML HTTP Request
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--  -->
