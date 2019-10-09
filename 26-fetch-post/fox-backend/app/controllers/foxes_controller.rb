@@ -5,7 +5,7 @@ class FoxesController < ApplicationController
     end
 
     def random
-      fox = Fox.all.sample 
+      fox = Fox.all.sample
       render json: fox
     end
 
@@ -15,6 +15,7 @@ class FoxesController < ApplicationController
     end
 
     def create
+      # byebug
         render json: Fox.create(fox_params)
     end
 
