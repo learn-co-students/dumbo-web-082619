@@ -22,7 +22,16 @@
 
 ## Update
 
+1. When check/click on the item event happens
+2. Make PATCH '/to_do_items/:id' (Update) fetch happen
+3. Slap the done class on/off the DOM!
+
+
 ## Delete
+
+1. When a click on a button event happens
+2. Make DELETE '/to_do_items/:id' (Destroy) fetch happen
+3. Slap the LI off the DOM!
 
 
 

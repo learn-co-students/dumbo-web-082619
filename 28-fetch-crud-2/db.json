@@ -11,19 +11,14 @@
       "id": 2
     },
     {
-      "title": "Bake more chicken",
-      "done": false,
+      "title": "Learn Delete",
+      "done": true,
       "id": 3
     },
     {
-      "title": "Learn Fetch",
-      "done": false,
+      "title": "Learn update",
+      "done": true,
       "id": 4
-    },
-    {
-      "title": "Learn hopscotch",
-      "done": false,
-      "id": 5
     }
   ],
   "snacks": [
