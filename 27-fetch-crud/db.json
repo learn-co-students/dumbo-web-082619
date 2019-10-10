@@ -12,8 +12,18 @@
     },
     {
       "title": "Bake more chicken",
-      "done": true,
+      "done": false,
       "id": 3
+    },
+    {
+      "title": "Learn Fetch",
+      "done": false,
+      "id": 4
+    },
+    {
+      "title": "Learn hopscotch",
+      "done": false,
+      "id": 5
     }
   ],
   "snacks": [
@@ -28,9 +38,14 @@
       "id": 2
     },
     {
-      "name": "Pizza",
-      "yumminess": 1000000,
+      "yumminess": 12,
+      "name": "pizza",
       "id": 3
+    },
+    {
+      "yumminess": 15,
+      "name": "lunchables",
+      "id": 4
     }
   ]
 }
