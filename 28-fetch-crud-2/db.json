@@ -1,0 +1,51 @@
+{
+  "to_do_items": [
+    {
+      "id": 1,
+      "title": "Walk the cat",
+      "done": false
+    },
+    {
+      "title": "Bake pizza",
+      "done": true,
+      "id": 2
+    },
+    {
+      "title": "Bake more chicken",
+      "done": false,
+      "id": 3
+    },
+    {
+      "title": "Learn Fetch",
+      "done": false,
+      "id": 4
+    },
+    {
+      "title": "Learn hopscotch",
+      "done": false,
+      "id": 5
+    }
+  ],
+  "snacks": [
+    {
+      "name": "Cinnamon",
+      "yumminess": 5,
+      "id": 1
+    },
+    {
+      "name": "Nutella",
+      "yumminess": 10,
+      "id": 2
+    },
+    {
+      "yumminess": 12,
+      "name": "pizza",
+      "id": 3
+    },
+    {
+      "yumminess": 15,
+      "name": "lunchables",
+      "id": 4
+    }
+  ]
+}
