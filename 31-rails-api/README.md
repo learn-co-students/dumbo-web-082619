@@ -9,7 +9,7 @@
 - Can Rails be an API and a webapp at the same time?
 - Can Rails be just an API?
   - rails new toy_tales --api --database=postgresql
-- How can I use Insomnia to test my API?
+- How can I use Insomnia/Postman to test my API?
 - How can I control what JSON my API returns from my models?
 
 

@@ -42,6 +42,8 @@ toyCollectionDiv.addEventListener("click", (event) => {
     fetch(`http://localhost:3000/toys/${id}`, {
       method: "DELETE"
     })
+    .then(res => res.json())
+    .then(console.log)
   }
 })
 
@@ -87,9 +89,29 @@ toyForm.addEventListener("submit", (event) => {
   })
   .then(res => res.json())
   .then(toyObject => {
-    toyCollectionDiv.innerHTML += toyCard(toyObject)
+    if (toyObject.errors) {
+      alert("Toy was not made")
+    } else {
+      toyCollectionDiv.innerHTML += toyCard(toyObject)
+    }
   })
 
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // OR HERE!

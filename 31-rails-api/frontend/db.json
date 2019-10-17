@@ -40,19 +40,7 @@
       "id": 8,
       "name": "Little Green Men",
       "image": "http://www.pngmart.com/files/3/Toy-Story-Alien-PNG-File.png",
-      "likes": -1
-    },
-    {
-      "name": "Chips",
-      "image": "https://cdn.pixabay.com/photo/2017/02/20/18/03/cat-2083492_960_720.jpg",
-      "likes": 6,
-      "id": 9
-    },
-    {
-      "name": "Chips!!!",
-      "image": "https://cdn.pixabay.com/photo/2017/02/20/18/03/cat-2083492_960_720.jpg",
-      "likes": 0,
-      "id": 10
+      "likes": 3
     }
   ]
 }
