@@ -1,7 +1,7 @@
 # Object Oriented JS
 
 ## Key Questions
-  * What is the relationship between JS objects and functions
+  * What is the relationship between JS objects and functions?
 * How does OO work in Ruby again?
 * How can I create a class using ES6 syntax?
   * What is the prototype of an object?

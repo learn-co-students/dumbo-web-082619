@@ -16,4 +16,17 @@ class Instructor
 
 end
 
+eric = Instructor.new("Eric", "Eric Kim")
+
+
+
+
+
+
+
+
+
+
+
+
 binding.pry
