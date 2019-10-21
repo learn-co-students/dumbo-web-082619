@@ -1,61 +1,3 @@
-const addBtn = document.querySelector('#new-toy-btn')
-const toyFormContainer = document.querySelector('.container')
-let addToy = false
-let toyCollectionDiv = document.getElementById('toy-collection')
-let toyForm = document.querySelector(".add-toy-form")
-
-// YOUR CODE HERE
-fetch("http://localhost:3000/toys")
-.then(res => res.json())
-.then((allToys) => {
-  console.log(allToys);
-  allToys.forEach((toy) => {
-    toyCollectionDiv.innerHTML += toyCard(toy)
-  })
-})
-
-
-toyCollectionDiv.addEventListener("click", (event) => {
-  if (event.target.className === "like-btn") {
-    let id = parseInt(event.target.dataset.id)
-
-    fetch(`http://localhost:3000/toys/${id}`, {
-      method: 'PATCH',
-      body: JSON.stringify({likes: likes}),
-      headers:{
-        'Content-Type': 'application/json',
-        "Accept": "application/json"
-      }
-    })
-    .then(res => res.json())
-    .then((toy) => {
-
-      let pTag = event.target.parentElement.querySelector("p")
-      pTag.innerText = `${toy.likes} Likes`
-    })
-  }
-  else if(event.target.className === "delete-btn"){
-    let id = parseInt(event.target.dataset.id)
-    fetch(`http://localhost:3000/toys/${id}`, {
-      method: "DELETE"
-    })
-    .then(res => res.json())
-    .then(() => {
-      event.target.parentElement.remove()
-    })
-  }
-})
-
-const toyCard = (toy) => {
-  return `<div class="card">
-    <h2>${toy.name}</h2>
-    <img src=${toy.image} class="toy-avatar" />
-    <p>${toy.likes} Likes</p>
-    <button data-id=${toy.id} class="like-btn">Like <3</button>
-    <button data-id=${toy.id} class="delete-btn">Delete</button>
-  </div>`
-}
-
 addBtn.addEventListener('click', () => {
   // hide & seek with the form
   addToy = !addToy
@@ -67,50 +9,14 @@ addBtn.addEventListener('click', () => {
   }
 })
 
+let toyFormObj = new ToyForm()
+toyFormObj.render()
 
-toyForm.addEventListener("submit", (event) => {
-  event.preventDefault()
-  let form = event.target
-  let name = form.name.value
-  let image = form.image.value
-
-  fetch(`http://localhost:3000/toys`, {
-    method: 'POST', // or 'PUT'
-    body: JSON.stringify({
-      name: name,
-      image: image,
-      likes: 0
-    }), // data can be `string` or {object}!
-    headers:{
-      'Content-Type': 'application/json',
-      "Accept": "application/json"
-    }
+// YOUR CODE HERE
+ToyAdaptor.getAllToys()
+.then((allToys) => {
+  allToys.forEach((toy) => {
+    let newToyObj = new ToyCard(toy)
+    toyCollectionDiv.append(newToyObj.render())
   })
-  .then(res => res.json())
-  .then(toyObject => {
-    if (toyObject.errors) {
-      alert("Toy was not made")
-    } else {
-      toyCollectionDiv.innerHTML += toyCard(toyObject)
-    }
-  })
-
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// OR HERE!
