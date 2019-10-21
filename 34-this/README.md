@@ -6,4 +6,4 @@
   * What is the value of `this` in a `fetch` `.then` callback?
 * What's the difference between how arrow functions handle `this` and the way regular functions handle `this`?
 * If functions are a type of object, what's on the prototype for a function?
-* What are `call`, `apply`, and `bind` and what do they do to the value of this?
+* What are `call`, `apply`, and `bind` and what do they do to the value of `this`?
