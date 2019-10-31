@@ -1,0 +1,293 @@
+{
+  "channels": [
+    {
+      "id": 1,
+      "name": "clams"
+    },
+    {
+      "id": 2,
+      "name": "waves"
+    },
+    {
+      "id": 3,
+      "name": "whiskers"
+    },
+    {
+      "id": 4,
+      "name": "holding-hands"
+    },
+    {
+      "id": 5,
+      "name": "splashing"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "Miranda"
+    },
+    {
+      "id": 2,
+      "name": "Melvin"
+    },
+    {
+      "id": 3,
+      "name": "Amelia"
+    }
+  ],
+  "messages": [
+    {
+      "id":1,
+      "text":"blark",
+      "eyes": 0,
+      "channelId": 1,
+      "userId": 3
+    },
+    {
+      "id":2,
+      "text":"hrk",
+      "eyes": 0,
+      "channelId": 1,
+      "userId": 3
+    },
+    {
+      "id":3,
+      "text":"thrk",
+      "eyes": 0,
+      "channelId": 2,
+      "userId": 1
+    },
+    {
+      "id":4,
+      "text":"ork",
+      "eyes": 0,
+      "channelId": 2,
+      "userId": 3
+    },
+    {
+      "id":5,
+      "text":"brk",
+      "eyes": 0,
+      "channelId": 2,
+      "userId": 3
+    },
+    {
+      "id":6,
+      "text":"hrk",
+      "eyes": 0,
+      "channelId": 2,
+      "userId": 1
+    },
+    {
+      "id":7,
+      "text":"thrk",
+      "eyes": 0,
+      "channelId": 3,
+      "userId": 3
+    },
+    {
+      "id":8,
+      "text":"bark",
+      "eyes": 0,
+      "channelId": 3,
+      "userId": 3
+    },
+    {
+      "id":9,
+      "text":"thrk",
+      "eyes": 0,
+      "channelId": 3,
+      "userId": 1
+    },
+    {
+      "id":10,
+      "text":"urk",
+      "eyes": 0,
+      "channelId": 4,
+      "userId": 3
+    },
+    {
+      "id":11,
+      "text":"brk",
+      "eyes": 0,
+      "channelId": 4,
+      "userId": 3
+    },
+    {
+      "id":12,
+      "text":"blerk",
+      "eyes": 0,
+      "channelId": 5,
+      "userId": 1
+    },
+    {
+      "id":13,
+      "text":"urk",
+      "eyes": 0,
+      "channelId": 5,
+      "userId": 2
+    },
+    {
+      "id":14,
+      "text":"urk",
+      "eyes": 0,
+      "channelId": 5,
+      "userId": 3
+    },
+    {
+      "id":15,
+      "text":"bark",
+      "eyes": 0,
+      "channelId": 5,
+      "userId": 1
+    },
+    {
+      "id":16,
+      "text":"blark",
+      "eyes": 0,
+      "channelId": 5,
+      "userId": 2
+    },
+    {
+      "id":17,
+      "text":"urk",
+      "eyes": 0,
+      "channelId": 5,
+      "userId": 3
+    },
+    {
+      "id":18,
+      "text":"blark",
+      "eyes": 0,
+      "channelId": 5,
+      "userId": 1
+    },
+    {
+      "id":19,
+      "text":"hrk",
+      "eyes": 0,
+      "channelId": 5,
+      "userId": 2
+    },
+    {
+      "id":20,
+      "text":"ork",
+      "eyes": 0,
+      "channelId": 5,
+      "userId": 3
+    },
+    {
+      "id":21,
+      "text":"blark",
+      "eyes": 0,
+      "channelId": 5,
+      "userId": 1
+    },
+    {
+      "id":22,
+      "text":"urk",
+      "eyes": 0,
+      "channelId": 5,
+      "userId": 2
+    },
+    {
+      "id":23,
+      "text":"thrk",
+      "eyes": 0,
+      "channelId": 5,
+      "userId": 3
+    },
+    {
+      "id":24,
+      "text":"thrk",
+      "eyes": 0,
+      "channelId": 5,
+      "userId": 1
+    },
+    {
+      "id":25,
+      "text":"bark",
+      "eyes": 0,
+      "channelId": 5,
+      "userId": 2
+    },
+    {
+      "id":26,
+      "text":"ork",
+      "eyes": 0,
+      "channelId": 5,
+      "userId": 3
+    },
+    {
+      "id":27,
+      "text":"brk",
+      "eyes": 0,
+      "channelId": 5,
+      "userId": 1
+    },
+    {
+      "id":28,
+      "text":"hrk",
+      "eyes": 0,
+      "channelId": 5,
+      "userId": 2
+    },
+    {
+      "id":29,
+      "text":"blerk",
+      "eyes": 0,
+      "channelId": 5,
+      "userId": 3
+    },
+    { 
+      "id": 31,
+      "text": "I love to use clams to open tools!!!!",
+      "eyes": 0,
+      "channelId": 5,
+      "userId": 3
+    },
+    { 
+      "id": 32,
+      "text": "I love holding hands!",
+      "eyes": 0,
+      "channelId": 5,
+      "userId": 3
+    },
+    { 
+      "id": 33,
+      "text": "I love Pizza!",
+      "eyes": 5,
+      "channelId": 5,
+      "userId": 3
+    },
+    { 
+      "id": 34,
+      "text": "Node, the otter way!",
+      "eyes": 0,
+      "channelId": 5,
+      "userId": 3
+    },
+    { 
+      "id": 35,
+      "text": "Checking out a new river!",
+      "eyes": 0,
+      "channelId": 5,
+      "userId": 3
+    },
+    { 
+      "id": 36,
+      "text": "Flatiron feelings!",
+      "eyes": 0,
+      "channelId": 5,
+      "userId": 3
+    }
+  ],
+  "reactions": [
+    {
+      "id": 1,
+      "messageId": 1,
+      "emoji": "🌶",
+      "userId": 1
+    }
+  ]
+}
