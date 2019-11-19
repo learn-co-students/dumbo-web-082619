@@ -1,0 +1,53 @@
+.new-cat {
+  background: navy;
+  color: white;
+  display: flex;
+  text-align: center;
+  padding: 20px 0;
+}
+.new-cat ol {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+.new-cat label {
+  margin-right: 5px;
+  text-align: right;
+}
+.new-cat label,
+.new-cat input {
+  display: inline-block;
+  min-width: 127px;
+}
+.new-cat input[type="submit"] {
+  font-size: 18px;
+  margin-top: 5px;
+  min-width: 0;
+  border: 3px solid magenta;
+  border-radius: 100px;
+}
+.cat-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  perspective: 500;
+}
+.cat-list li {
+  border-bottom: 1px solid #fa0;
+  padding: 10px;
+  background: #fc9;
+  animation: fade-in .5s;
+  transform-origin: top center;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: rotateX(90deg);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
