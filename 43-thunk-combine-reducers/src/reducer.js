@@ -24,6 +24,11 @@ const reducer = (oldState = initialState, action) => {
         ...oldState,
         cats: []
       }
+    case actionNames.LOAD_CATS:
+      return {
+        ...oldState,
+        cats: action.cats
+      }
     default: 
       return {
         ...oldState

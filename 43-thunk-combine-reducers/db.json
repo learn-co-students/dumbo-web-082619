@@ -1,0 +1,26 @@
+{
+  "cats": [
+    {
+      "id": 1,
+      "name": "Fluffy",
+      "tailLength": 8
+    },
+    {
+      "id": 2,
+      "name": "Garfield",
+      "tailLength": 6
+    }
+  ],
+  "gerbils": [
+    {
+      "id": 1,
+      "name": "Jaws",
+      "tailLength": 1
+    },
+    {
+      "id": 2,
+      "name": "Jaws II",
+      "tailLength": 1
+    }
+  ]
+}

@@ -19,11 +19,23 @@ class CatForm extends React.Component {
 
   onSubmit = (event) => {
     event.preventDefault()
-    this.props.addCat({
+
+    const cat = {
       name: this.state.name,
       tailLength: this.state.tailLength
-    })
-    this.setState({ ...initialState })
+    }
+
+    fetch("http://localhost:3000/cats", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(cat)
+    }).then(res => res.json())
+      .then(data => {
+        this.props.addCat(data)
+        this.setState({ ...initialState })
+      })
   }
 
   render(){
