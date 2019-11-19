@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux'
 import actionCreators from './actionCreators'
+import { addCat } from './thunks'
 
 const initialState = {
   name: "",
@@ -25,17 +26,10 @@ class CatForm extends React.Component {
       tailLength: this.state.tailLength
     }
 
-    fetch("http://localhost:3000/cats", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(cat)
-    }).then(res => res.json())
-      .then(data => {
-        this.props.addCat(data)
-        this.setState({ ...initialState })
-      })
+    this.props.addCat(cat)
+
+    this.setState({ ...initialState }) //clear form
+
   }
 
   render(){
@@ -59,13 +53,14 @@ class CatForm extends React.Component {
   }
 }
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    addCat: cat => {
-      const action = actionCreators.addCatActionCreator(cat.name, cat.tailLength)
-      dispatch(action)
-    }
-  }
+// const mapDispatchToProps = dispatch => {
+//   return {
+//     addCat: (cat) => dispatch(addCat(cat))
+//   }
+// }
+
+const mapDispatchToProps = {
+  addCat: addCat
 }
 
 const higherOrderComponent = connect(null, mapDispatchToProps)

@@ -9,6 +9,41 @@
       "id": 2,
       "name": "Garfield",
       "tailLength": 6
+    },
+    {
+      "name": "Jinx",
+      "tailLength": "12",
+      "id": 3
+    },
+    {
+      "name": "Smokie",
+      "tailLength": "15",
+      "id": 4
+    },
+    {
+      "name": "Elliott",
+      "tailLength": "99",
+      "id": 5
+    },
+    {
+      "name": "Nora",
+      "tailLength": "22",
+      "id": 6
+    },
+    {
+      "name": "Simba",
+      "tailLength": "9",
+      "id": 8
+    },
+    {
+      "name": "Potato",
+      "tailLength": "09",
+      "id": 10
+    },
+    {
+      "name": "Jinx",
+      "tailLength": "11",
+      "id": 12
     }
   ],
   "gerbils": [

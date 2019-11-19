@@ -1,14 +1,13 @@
 import React from 'react';
 import Cat from './Cat'
 import { connect } from 'react-redux'
-import actionNames from './actionNames'
+import { loadCats } from './thunks'
 
 class CatContainer extends React.Component {
 
   componentDidMount(){
-    fetch("http://localhost:3000/cats")
-      .then(res => res.json())
-      .then(data => this.props.catsLoaded(data))
+    // console.log(this.props.loadCats)
+    this.props.loadCats()
   }
 
   render(){
@@ -23,30 +22,23 @@ class CatContainer extends React.Component {
   }
 }
 
-// export default CatContainer;
 
 const mapStateToProps = (state) => {
   // console.log(state)
-  // console.log("mapStateToProps got called")
   return {
     cats: state.cats
   }
 }
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    catsLoaded: (cats) => {
-      dispatch({
-        type: actionNames.LOAD_CATS,
-        cats: cats
-      })
-    }
-  }
-}
+// const mapDispatchToProps = (dispatch) => {
+//   return {
+//     loadCats: () => dispatch(loadCats())
+//   }
+// }
 
-// const higherOrderComponent = connect(mapStateToProps)
-// const WrappedComponent = higherOrderComponent(CatContainer)
-// export default WrappedComponent
+const mapDispatchToProps = {
+  loadCats: loadCats
+}
 
 export default connect(mapStateToProps, mapDispatchToProps)(CatContainer)
 

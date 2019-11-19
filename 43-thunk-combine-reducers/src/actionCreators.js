@@ -1,12 +1,9 @@
 import actionNames from './actionNames'
 
-const addCatActionCreator = (catName, catTailLength) => {
+const addCatActionCreator = (cat) => {
   return {
     type: actionNames.ADD_CAT,
-    cat: {
-      name: catName,
-      tailLength: catTailLength
-    }
+    cat: cat
   }
 }
 
